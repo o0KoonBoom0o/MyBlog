@@ -1,0 +1,403 @@
+@font-face{
+    font-family: 'Roboto-Regular';
+    src: url(/fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face{
+    font-family: 'Roboto-Medium';
+    src: url(/fonts/Roboto/Roboto-Medium.ttf);
+}
+@font-face{
+    font-family: 'Roboto-Bold';
+    src: url(/fonts/Roboto/Roboto-Bold.ttf);
+}
+@font-face{
+    font-family: 'Roboto-Light';
+    src: url(/fonts/Roboto/Roboto-Light.ttf);
+}
+@font-face{
+    font-family: 'Kanit';
+    src: url(/fonts/Kanit/Kanit-Regular.ttf);
+}
+@font-face{
+    font-family: 'Kanit-Bold';
+    src: url(/fonts/Kanit/Kanit-Bold.ttf);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    font-family: 'Roboto-Regular', 'Kanit', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-top: 70px;
+}
+
+.shadow{
+    -webkit-box-shadow: 5px 5px 59px -33px rgba(51,51,51,0.6);
+    -moz-box-shadow: 5px 5px 59px -33px rgba(51,51,51,0.6);
+    box-shadow: 5px 5px 59px -33px rgba(51,51,51,0.6);  
+}
+
+h1,h2,h3,h4,h5{
+    margin: 0;
+    font-family: 'Roboto-Regular', "Kanit";
+}
+
+.navbar{
+    background-color: #ffffff;
+    border-bottom: 1px solid #CECED2;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    opacity: 0.97;
+    z-index: 1;
+
+    .nav-auth{
+        a{
+            text-decoration: none;
+            color: #333333;
+            margin: 0 10px;
+        }
+        .dropdown {
+            display: inline;
+        }
+          
+        /*.dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            z-index: 1;
+            text-align: center;
+        }
+          
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }*/
+    }
+
+}
+
+.navbar img{
+    height: 50px;
+}
+  
+.navbar .nav{
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 10px 0 10px 0;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+  
+.nav div:nth-child(2){
+    text-align: right;
+}
+  
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+    .more{
+        text-align: right;
+        a{
+            font-family: 'Roboto-Bold';
+        }
+    }
+}
+  
+.container img{
+    width: 100%;
+    object-fit: cover;
+}
+  
+.item-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+  
+.card{
+    font-family: "Roboto-Regular", "Kanit";
+    border-radius: 10px;
+    transition: .3s;
+    cursor: pointer;
+}
+  
+.card div{
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+}
+  
+.card img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+}
+  
+.line-card{
+    font-family: "Roboto-Regular", "Kanit";
+    background-color: #fafafa;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    transition: .3s;
+    margin: 30px 0;
+    cursor: pointer;
+}
+  
+.line-card img{
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    object-fit: cover;
+}
+
+.line-card-body{
+    padding: 30px;
+    line-height: 2;
+}
+
+.line-card-body div:nth-child(1){
+    font-family: 'Roboto-Bold', "Kanit-Bold";
+    font-size: 20px;
+}
+
+.line-card-body div:nth-child(2){
+    font-family: "Roboto-Light", "Kanit";
+    font-size: 16px;
+    color: #333333;
+}
+
+.Footer{
+    font-family: 'Roboto-Regular', "Kanit";
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.Footer div{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 30px;
+    line-height: 1.4;
+}
+
+.Footer a{
+    color: #ffffff;
+}
+
+.auth-form{
+    text-align: center;
+    padding: 30px;
+    margin: 70px 0;
+    font-weight: 'Roboto-Regular';
+    font-size: 18px;
+
+    .alterop{
+        font-weight: 'Roboto-Bold', 'Kanit-Bold';
+        font-size: 14px;
+        color: #333333;
+        margin-top: 10px;
+    }
+    a{
+        color: #333333;
+    }
+
+    h3{
+        margin-bottom: 20px;
+        font-size: 22px;
+    }
+    .forgetpassword{
+        margin: 10px;
+        font-size: 14px;
+    }
+    input[type='checkbox']{
+        vertical-align: middle;
+    }
+}
+
+input{
+    font-family: "Poppins", "Kanit";
+    font-size: 14px;
+    outline: none;
+    padding: 5px;
+    height: 30px;
+    border: none;
+    margin: 5px;
+    border: 2px solid transparent;
+}
+
+input[type='text'],input[type='email'],input[type='password']{
+    width: 20%;
+}
+
+input:hover{
+    border-bottom: 2px solid #00BFA6;
+}
+
+input:focus{
+    border-bottom: 2px solid #00BFA6;
+}
+
+.btn{
+    font-family: "Roboto-Regular", "Kanit";
+    margin-top: 10px;
+    padding: 5px 20px;
+    font-size: 18px;
+    background: none;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    -webkit-box-shadow: 10px 10px 23px -16px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 23px -16px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 23px -16px rgba(0,0,0,0.75);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn-submit{
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-submit:hover{
+    background-color: #ffffff;
+    color: #28a745;
+}
+
+.content-container {
+    max-width: 960px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+  
+.content-container .content-body {
+    margin-top: 50px;
+}
+  
+.content-container p {
+    text-indent: 2em;
+    font-size: 18px;
+}
+  
+.content-container h1 {
+    font-size: 24px;
+    text-align: center;
+    margin: 20px 0;
+}
+  
+.content-container img {
+    width: 100%;
+    box-shadow: 5px 5px 59px -33px rgba(51, 51, 51, 0.6);
+}
+
+.pagination{
+    text-align: center;
+    li{
+        font-family: 'Roboto-Regular', "Kanit";
+        list-style: none;
+        display: inline;
+        padding: 10px 20px;
+        border-radius: 10px;
+        text-align: center;
+        background-color: #00BFA6;
+        color: #ffffff;
+        margin: 0 10px;
+        -webkit-box-shadow: 10px 10px 23px -16px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 23px -16px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 23px -16px rgba(0,0,0,0.75);
+        transition: .5s;
+    }
+    li:hover{
+        color: #00BFA6;
+        background-color: #ffffff;
+    }
+    .disabled{
+       // display: none;
+       background-color: lightgray;
+    }
+    .disabled:hover{
+       background-color: white;
+       color: lightgray;
+    }
+}
+
+@media screen and (min-width: 960px){
+    .card:hover{
+        overflow: hidden;
+        transform: translateY(2px);
+    }
+
+    .line-card:hover{
+        overflow: hidden;
+        transform: translateY(2px);
+    }
+}
+
+@media screen and (max-width: 960px){
+    .content-body {
+        margin: 50px;
+    }
+    .auth-form{
+        input[type='text'],input[type='email'],input[type='password']{
+            width: 50%;
+            text-align: center;
+        }
+    }
+    .navbar div{
+        padding: 0 30px;
+    }
+    .item-list{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .card{
+        margin-top: 10px;
+    }
+    .container{
+        margin: 50px;
+    }
+    .line-card{
+        display: flex;
+        flex-direction: column-reverse;
+        border-radius: 10px;
+    }
+    .line-card-body{
+        padding: 0;
+    }
+    .line-card img{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 0px;
+    }
+    .line-card-body div:nth-child(1){
+        font-family: 'Roboto-Regular', "Kanit";
+        padding: 15px;
+        text-align: center;
+        font-size: 16px;
+    }
+    .line-card-body div:nth-child(2){
+        display: none;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .auth-form{
+        input[type='text'],input[type='email'],input[type='password']{
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
