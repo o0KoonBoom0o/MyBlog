@@ -19,6 +19,9 @@ Auth::routes();
 
 Route::resource('/', 'DataController');
 
+Route::resource('/profile', 'UserController')->middleware('auth');
+
 Route::resource('/post', 'PostController');
 
 Route::get('/post/create', 'PostController@create')->middleware('auth');
+Route::get('/post/{id}/edit', 'PostController@edit');

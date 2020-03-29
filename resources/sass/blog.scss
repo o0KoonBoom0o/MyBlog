@@ -57,6 +57,11 @@
         font-weight: normal; 
         width: 80%;
     }
+    #edittag{
+        font-size: 16px;
+        font-weight: normal; 
+        width: 80%;
+    }
     .create-img{
         transition: .5s ease;
     }
@@ -93,4 +98,30 @@
             font-size: 14px;
         }
     }
+}
+
+.container{
+    thead tr{
+        background-color: #454545;
+        color: #ffffff;
+        th{
+            padding: 10px;
+        }
+    }
+    tr:nth-child(even){
+        background-color: #f2f2f2;
+    }
+    td:nth-child(4){
+        text-align: center;
+    }
+    table{
+        width: 100%;
+    }
+    .btn{
+        margin: 5px 0;
+    }
+}
+
+textarea{
+    overflow: hidden;
 }

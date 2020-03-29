@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Post;
 use DB;
@@ -43,7 +44,7 @@ class PostController extends Controller
             'posttitle' => 'required|min:3',
             'postcontent' => 'required',
             'posttag' => 'required',
-            'posttitleimg' => ['required|mimes:jpeg,jpg,png|max:1000|', Rule::dimensions()->maxHeight(700)]
+            'posttitleimg' => 'required|mimes:jpeg,jpg,png|max:1000'
         ]);
         $path = $request->file('posttitleimg')->store('blog-photo','public');
 
@@ -76,7 +77,11 @@ class PostController extends Controller
      */
     public function edit(post $post)
     {
-        //
+        $checkpost = DB::table('posts')->where('id', $post->id)->get();
+        if (Auth::check() && Auth::user()->id == $checkpost[0]->user) {
+            return view('post.edit', compact('post', $post));
+        }
+        return redirect('/post/' .  $post->id);
     }
 
     /**
@@ -88,7 +93,27 @@ class PostController extends Controller
      */
     public function update(Request $request, post $post)
     {
-        //
+
+        $request->validate([
+            'edittitle' => 'required|min:3',
+            'editcontent' => 'required',
+            'edittag' => 'required',
+            'edittitleimg' => 'mimes:jpeg,jpg,png|max:1000'
+        ]);
+
+        if($request->file('edittitleimg') != null && $request->file('edittitleimg') != ""){
+            $delimg = DB::table('posts')->where('id', $post->id)->get();
+            Storage::disk('local')->delete('public/blog-photo/' . $delimg[0]->image);
+            $path = $request->file('edittitleimg')->store('blog-photo','public');
+            $post->image =$request->file('edittitleimg')->hashName();
+        }
+
+        $post->title = $request->edittitle;
+        $post->tag = $request->edittag;
+        $post->content = $request->editcontent;
+
+        $post->save();
+        return redirect('/post/' . $post->id);
     }
 
     /**

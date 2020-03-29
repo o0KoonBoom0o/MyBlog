@@ -25,7 +25,7 @@
                 @endif
             @else
               <div>
-                  <a href="#" role="button">
+                  <a href="/profile" role="button">
                     {{ Auth::user()->name }} <span class="caret"></span>
                   </a>
                   <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

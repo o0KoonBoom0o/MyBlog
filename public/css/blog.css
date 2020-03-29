@@ -65,6 +65,12 @@
   width: 80%;
 }
 
+.create-blog #edittag {
+  font-size: 16px;
+  font-weight: normal;
+  width: 80%;
+}
+
 .create-blog .create-img {
   transition: 0.5s ease;
 }
@@ -102,5 +108,34 @@
   color: #333333;
   margin: 5px;
   font-size: 14px;
+}
+
+.container thead tr {
+  background-color: #454545;
+  color: #ffffff;
+}
+
+.container thead tr th {
+  padding: 10px;
+}
+
+.container tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.container td:nth-child(4) {
+  text-align: center;
+}
+
+.container table {
+  width: 100%;
+}
+
+.container .btn {
+  margin: 5px 0;
+}
+
+textarea {
+  overflow: hidden;
 }
 
